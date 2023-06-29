@@ -1,5 +1,5 @@
 
-FROM lwthiker/curl-impersonate:0.5.2-chrome-slim-buster
+FROM lwthiker/curl-impersonate:0.5.4-chrome-slim-bullseye
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -26,7 +26,7 @@ RUN pip3 install -r requirements.txt
 RUN mkdir data
 COPY *.py /app/
 
-ENV CURL_IMPERSONATE=chrome101
+ENV CURL_IMPERSONATE=chrome110
 ENV TZ=America/Chicago
 
 CMD ["python3", "main.py"]
